@@ -1,0 +1,86 @@
+.MainGrid {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 50rem;
+
+    .mainGridSections {  
+        .playerTurn {
+            width: 100%;
+            text-align: center;
+            font-size: $supertitle-font-size;
+            font-weight: $bold-weight;
+            #blueTurn {
+                color: $blue-player-light;
+                transition: $main-transition;
+            }
+            #redTurn {
+                color: $red-player-light;
+                transition: $main-transition;
+            }
+        }
+        .playerTurn.darkTheme {
+            #blueTurn {
+                color: $blue-player-dark;
+            }
+            #redTurn {
+                color: $red-player-dark;
+            }
+        }
+        
+        .playZone {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .mainRow {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: calc((100%/3));
+            }
+
+            .gridLine {
+                position: absolute;
+                background-color: $grid-light;
+                transition: $main-transition;
+            }
+            .verticalLine {
+                width: 5px;
+                height: 100%;
+            }
+            .horizontalLine {
+                width: 100%;
+                height: 5px;
+            }
+            #vertical1 {
+                left: calc((100% / 3) - 2.5px);
+            }
+            #vertical2 {
+                left: calc((100% / 3 * 2) - 2.5px);
+            }
+            #horizontal1 {
+                top: calc((100% / 3) - 2.5px);
+            }
+            #horizontal2 {
+                top: calc((100% / 3 * 2) - 2.5px);
+            }
+        
+            .gridLine.darkTheme {
+                background-color: $grid-dark;
+            }
+        }
+    }
+}
+
+.toastContainer {
+    position: absolute;
+}

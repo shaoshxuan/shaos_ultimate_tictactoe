@@ -1,9 +1,14 @@
-import './Footer.scss';
+import classNames from "classnames";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/themeContext";
+import "./Footer.scss"
 
 const Footer = () => {
+    const {darkMode} = useContext(ThemeContext);
+    
     return (
-        <div className='Footer'>
-                Shao's Ultimate Tic-Tac-Toe | Designed and Developed by Shao Shxuan | © 2022 Chua Shao Shxuan
+        <div className={classNames("Footer", darkMode ? "darkTheme" : "")}>
+            Designed and Developed by Shao Shxuan | © 2022
         </div>
     )
 }

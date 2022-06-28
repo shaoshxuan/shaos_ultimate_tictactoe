@@ -1,0 +1,51 @@
+.IndivBox {
+    width: calc((100%/3) - 0.3rem);
+    height: 100%;
+    background-color: $box-light;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: $main-transition;
+}
+.indivBoxTaken {
+    cursor: not-allowed;
+    opacity: 0.25;
+}
+
+.IndivBox.darkTheme {
+    background-color: $box-dark;
+}
+
+.blueTaken {
+    background-color: $blue-player-box-light;
+    cursor: not-allowed;
+}
+.blueHover {
+    &:hover {
+        background-color: $blue-player-box-light;
+    }
+}
+.darkTheme.blueTaken {
+    background-color: $blue-player-box-dark;
+}
+.darkTheme.blueHover {
+    &:hover {
+        background-color: $blue-player-box-dark;
+    }
+}
+.redTaken {
+    background-color: $red-player-box-light;
+    cursor: not-allowed;
+}
+.redHover {
+    &:hover {
+        background-color: $red-player-box-light;
+    }
+}
+.darkTheme.redTaken {
+    background-color: $red-player-box-dark;
+}
+.darkTheme.redHover {
+    &:hover {
+        background-color: $red-player-box-dark;
+    }
+}

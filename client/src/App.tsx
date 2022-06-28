@@ -1,23 +1,13 @@
-import { useState } from 'react';
 import './App.scss';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import Menu from './components/main_menu/Menu';
+import Main from './components/Main';
+import { ThemeContextProvider } from './contexts/themeContext';
 
-function App() {
-    const [gameMode, setGameMode] = useState<number>(0);
-
+const App = () => {
     return (
-        <div className="App">
-            <Header gameMode={gameMode}></Header>
-            <div className='mainContent'>
-                {
-                    gameMode === 0
-                    ? <Menu setGameMode={setGameMode}></Menu>
-                    : ""
-                }
-            </div>
-            <Footer></Footer>
+        <div className="App">      
+            <ThemeContextProvider>
+                <Main />
+            </ThemeContextProvider>
         </div>
     );
 }

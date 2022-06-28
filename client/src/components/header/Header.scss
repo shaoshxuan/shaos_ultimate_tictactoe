@@ -1,45 +1,77 @@
 .Header {
-    width: 100%;
-    height: 8vh;
+    position: fixed;
+    z-index: 50;
+    width: calc(100% - 2*$main-padding);
+    padding: $main-padding;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-    .logo {
-        float: left;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-
-        &:hover {
-            transform: scale(1.02);
-
-            .gameName {
-                text-shadow: 0 0 10px white;
-            }
-        }
-        
-
-        img {
-            width: 50px;
-            margin: 20px;
-        }
-
-        .gameName {
-            font-size: 16px;
-            font-weight: 500;
-            color: white;
-            transition: all 0.3s ease 0s;
-        }
+    .header-logo {
+        font-size: $title-font-size;
+        font-weight: $bold-weight;
+        color: $text-light;
+        transition: $main-transition;
+    }
+    .header-logo.darkTheme {
+        color: $text-dark;
     }
 
-    .gameInfo {
-        float: right;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0 20px;
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
+    .theme-toggle-pill {
+        width: 70px;
+        height: 35px;
+        border-radius: 35px;
+        background: $pill-background-light;
+        position: relative;
+        transition: $main-transition;
+
+        .sun-moon-icons {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .theme-toggle-sun {
+                width: 20px;
+                height: 20px;
+                margin: 5px;
+
+                svg {
+                    fill: $sun-color;
+                }
+            }
+    
+            .theme-toggle-moon {
+                width: 20px;
+                height: 20px;
+                margin: 5px;
+
+                svg {
+                    fill: $moon-color;
+                }
+            }
+        }
+
+        .theme-toggle-switch {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 7%;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: $toggle-light;
+            transition: $main-transition;
+        }
+        .theme-toggle-switch.darkTheme {
+            right: 53%;
+            background-color: $toggle-dark;
+        }
+    }
+    .theme-toggle-pill.darkTheme {
+        background: $pill-background-dark;
     }
 }
