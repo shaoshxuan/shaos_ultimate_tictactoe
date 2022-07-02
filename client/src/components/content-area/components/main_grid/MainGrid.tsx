@@ -40,7 +40,11 @@ const MainGrid = () => {
             
             if (gameWinningLogic(gridState)){
                 setNextMove("end")
-            } else {
+            } 
+            else if (gridState.every((subGrid) => subGrid.length === 10)) {
+                setNextMove("tie")
+            }
+            else {
                 if (gridState[clickedSubGridIndex].length === 10){
                     setNextMove("all")
                 } else {
@@ -58,7 +62,19 @@ const MainGrid = () => {
         <div className="MainGrid">
             <div className="mainGridSections">
                 <div className={classNames("playerTurn",  darkMode ? "darkTheme" : "")}>
-                    {nextMove === "end" ? <span id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + " WON!"}</span> : (playerTurn === 'blue' ? <span id="blueTurn">BLUE'S TURN</span> : <span id="redTurn">RED'S TURN</span>)}
+                    {
+                        nextMove === "end" 
+                        ? 
+                        <span id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + " WON!"}</span> 
+                        : 
+                        (
+                            nextMove === "tie"
+                            ?
+                            <span id="gameTie">{"GAME TIED!"}</span> 
+                            :
+                            <span id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + "'S TURN"}</span>
+                        )
+                    }
                 </div>
                 <div className="playZone">
                     <>

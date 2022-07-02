@@ -1,0 +1,77 @@
+.HomeMenu {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .menu-logo {
+        margin: 2rem;
+        font-size: 6rem;
+        font-weight: $bold-weight;
+        color: $text-light;
+        transition: $main-transition;
+    }
+    .menu-logo.darkTheme {
+        color: $text-dark;
+    }
+
+    .game-options {
+        button {
+            margin: 0.5rem 1.5rem;
+            width: 12rem;
+            height: 4rem;
+            color: $text-dark;
+            font-size: $title-font-size;
+            background-color: $text-light;
+            border: none;
+            border-radius: 0.5rem;
+            transition: $main-transition;
+            cursor: pointer;
+
+            &:hover {
+                color: $text-light;
+                background-color: $sun-color;
+                box-shadow: 0 0 15px $sun-color;
+            }
+        }
+        .btnDisabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+
+            &:hover {
+                color: $text-dark;
+                background-color: $text-light;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .game-options.darkTheme {
+        button {
+            color: $text-dark;
+            background-color: $text-light;
+
+            &:hover {
+                color: $text-light;
+                background-color: $text-dark;
+                box-shadow: 0 0 15px $text-dark;
+            }
+        }
+        .btnDisabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+
+            &:hover {
+                color: $text-dark;
+                background-color: $text-light;
+                box-shadow: none;
+            }
+        }
+    }
+}

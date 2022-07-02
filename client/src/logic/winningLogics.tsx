@@ -14,6 +14,7 @@ export const subGridWinningLogic = (gridState: string[]) => {
     winningLogic.forEach(winningComb => {
         if (gridState[winningComb[0]] !== "" && gridState[winningComb[0]] === gridState[winningComb[1]] && gridState[winningComb[1]] === gridState[winningComb[2]]){
             winFlag = true
+            return
         }
     });
     return winFlag;
@@ -24,6 +25,7 @@ export const gameWinningLogic = (gridState: Array<string>[]) => {
     winningLogic.forEach(winningComb => {
         if (gridState[winningComb[0]].length === 10 && gridState[winningComb[0]][9] === gridState[winningComb[1]][9] && gridState[winningComb[1]][9] === gridState[winningComb[2]][9]){
             winFlag = true
+            return
         }
     });
     return winFlag;

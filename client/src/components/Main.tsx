@@ -7,12 +7,16 @@ import Footer from "./footer/Footer";
 import ContentArea from "./content-area/ContentArea";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ParallexBG from "./parallex-bg/ParallexBG";
 
 const Main = () => {
     const {darkMode} = useContext(ThemeContext);
+    
     return (
         <div className="Main">
-            <div className={classNames("background", darkMode ? "darkTheme" : "")}></div>
+            <div className={classNames("background", darkMode ? "darkTheme" : "")}>
+                <ParallexBG />
+            </div>
             <Header/>
             <ContentArea />
             <Footer />

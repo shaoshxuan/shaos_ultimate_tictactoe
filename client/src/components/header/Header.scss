@@ -9,13 +9,18 @@
     align-items: center;
 
     .header-logo {
-        font-size: $title-font-size;
-        font-weight: $bold-weight;
-        color: $text-light;
-        transition: $main-transition;
+        a {
+            font-size: $title-font-size;
+            font-weight: $bold-weight;
+            color: $text-light;
+            transition: $main-transition;
+            text-decoration: none;
+        }
     }
     .header-logo.darkTheme {
-        color: $text-dark;
+        a {
+            color: $text-dark;
+        }
     }
 
     .theme-toggle-pill {

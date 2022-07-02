@@ -6,12 +6,18 @@
     width: 50rem;
     height: 50rem;
 
-    .mainGridSections {  
+    .mainGridSections {
+        animation: mainGridEntry 0.8s ease-in forwards ;
+        
         .playerTurn {
             width: 100%;
             text-align: center;
             font-size: $supertitle-font-size;
             font-weight: $bold-weight;
+            #gameTie {
+                color: $tie-box-light;
+                transition: $main-transition;
+            }
             #blueTurn {
                 color: $blue-player-light;
                 transition: $main-transition;
@@ -22,6 +28,9 @@
             }
         }
         .playerTurn.darkTheme {
+            #gameTie {
+                color: $tie-box-dark;
+            }
             #blueTurn {
                 color: $blue-player-dark;
             }
@@ -83,4 +92,13 @@
 
 .toastContainer {
     position: absolute;
+}
+
+@keyframes mainGridEntry {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 1000%;
+    }
 }

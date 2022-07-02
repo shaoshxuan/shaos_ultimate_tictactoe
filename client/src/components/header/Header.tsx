@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../../contexts/themeContext";
 import "./Header.scss";
 
@@ -9,7 +10,7 @@ const Header = () => {
     return (
         <div className="Header">
             <div className={classNames("header-logo", darkMode ? "darkTheme" : "")}>
-                Ultimate T<sup>3</sup>
+                <Link to="/">Ultimate T<sup>3</sup></Link>
             </div>
             <div className={classNames("theme-toggle-pill", darkMode ? "darkTheme" : "")} onClick={() => toggleDarkModeTheme()}>
                 <div className="sun-moon-icons">
