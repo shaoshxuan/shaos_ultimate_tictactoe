@@ -14,6 +14,10 @@
             text-align: center;
             font-size: $supertitle-font-size;
             font-weight: $bold-weight;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             #gameTie {
                 color: $tie-box-light;
                 transition: $main-transition;
@@ -27,6 +31,20 @@
                 transition: $main-transition;
             }
         }
+
+        .replayBtn {
+            margin: 0 0.5rem;
+            color: $text-light;
+            font-size: $supertitle-font-size;
+            transition: $main-transition;
+            cursor: pointer;
+
+            &:hover {
+                color: $sun-color;
+                filter: drop-shadow(0 0 10px $sun-color);
+            }
+        }
+        
         .playerTurn.darkTheme {
             #gameTie {
                 color: $tie-box-dark;
@@ -36,6 +54,15 @@
             }
             #redTurn {
                 color: $red-player-dark;
+            }
+
+            .replayBtn {
+                color: $text-dark;
+    
+                &:hover {
+                    color: $text-light;
+                    filter: drop-shadow(0 0 10px $text-light)
+                }
             }
         }
         

@@ -58,6 +58,22 @@ const MainGrid = () => {
         }
     }
 
+    const replayGame = () => {
+        setGridState([
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+            ["","","","","","","","",""],
+        ]);
+        setNextMove("all");
+        setPlayerTurn('blue');
+    }
+
     return (
         <div className="MainGrid">
             <div className="mainGridSections">
@@ -65,14 +81,20 @@ const MainGrid = () => {
                     {
                         nextMove === "end" 
                         ? 
-                        <span id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + " WON!"}</span> 
+                        <>
+                            <div id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + " WON!"}</div>
+                            <div className={classNames("replayBtn",  darkMode ? "darkTheme" : "")} title="Play Again" onClick={()=>replayGame()}>🗘</div>
+                        </>
                         : 
                         (
                             nextMove === "tie"
                             ?
-                            <span id="gameTie">{"GAME TIED!"}</span> 
+                            <>
+                                <div id="gameTie">{"GAME TIED!"}</div>
+                                <div className={classNames("replayBtn",  darkMode ? "darkTheme" : "")} title="Play Again" onClick={()=>replayGame()}>🗘</div>
+                            </>
                             :
-                            <span id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + "'S TURN"}</span>
+                            <div id={playerTurn+"Turn"}>{playerTurn.toUpperCase() + "'S TURN"}</div>
                         )
                     }
                 </div>
