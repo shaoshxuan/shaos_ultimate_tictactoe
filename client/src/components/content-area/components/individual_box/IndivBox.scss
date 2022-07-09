@@ -49,3 +49,9 @@
         background-color: $red-player-box-dark;
     }
 }
+
+@media all and (max-width: 900px){
+    .IndivBox {
+        border-radius: 0.5rem;
+    }
+}

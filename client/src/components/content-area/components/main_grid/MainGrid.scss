@@ -134,6 +134,24 @@
     }
 }
 
+@media all and (max-width: 900px){
+    .MainGrid{
+        width: 30rem;
+        height: 30rem;
+
+        .mainGridSections {
+            .playZone {
+                .verticalLine {
+                    width: 3px;
+                }
+                .horizontalLine {
+                    height: 3px;
+                }
+            }
+        }
+    }
+}
+
 @media all and (max-width: 650px){
     .MainGrid{
         .widthWarning {
