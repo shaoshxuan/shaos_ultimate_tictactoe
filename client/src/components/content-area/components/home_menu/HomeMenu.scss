@@ -12,6 +12,7 @@
 
     .menu-logo {
         margin: 2rem;
+        text-align: center;
         font-size: 6rem;
         font-weight: $bold-weight;
         color: $text-light;
@@ -22,6 +23,7 @@
     }
 
     .game-options {
+        text-align: center;
         button {
             margin: 0.5rem 1.5rem;
             width: 12rem;

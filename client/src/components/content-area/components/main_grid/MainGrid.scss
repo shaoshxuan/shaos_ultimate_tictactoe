@@ -6,6 +6,10 @@
     width: 50rem;
     height: 50rem;
 
+    .widthWarning {
+        display: none;
+    }
+
     .mainGridSections {
         animation: mainGridEntry 0.8s ease-in forwards ;
         
@@ -128,4 +132,19 @@
     to {
         opacity: 1000%;
     }
+}
+
+@media all and (max-width: 650px){
+    .MainGrid{
+        .widthWarning {
+            display: block;
+            width: auto;
+            text-align: center;
+            font-size: $supertitle-font-size;
+        }
+        .mainGridSections {
+            display: none;
+        }   
+    }
+    
 }

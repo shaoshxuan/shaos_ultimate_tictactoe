@@ -76,6 +76,9 @@ const MainGrid = () => {
 
     return (
         <div className="MainGrid">
+            <div className="widthWarning">
+                Rotate your phone for game viewing compatibility
+            </div>
             <div className="mainGridSections">
                 <div className={classNames("playerTurn",  darkMode ? "darkTheme" : "")}>
                     {

@@ -1,7 +1,7 @@
 .Header {
     position: fixed;
     z-index: 50;
-    width: calc(100% - 2*$main-padding);
+    width: calc(100vw - 2*$main-padding);
     padding: $main-padding;
     display: flex;
     flex-direction: row;

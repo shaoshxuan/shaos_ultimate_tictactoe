@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 50;
     bottom: 0%;
-    width: 100%;
+    width: calc(100vw - 2*$main-padding);
     text-align: center;
     padding: $main-padding;
     color: $text-light;
