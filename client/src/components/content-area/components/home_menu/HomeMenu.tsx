@@ -3,6 +3,7 @@ import { ThemeContext } from "../../../../contexts/themeContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomeMenu.scss";
+import { Helmet } from "react-helmet";
 
 const HomeMenu = () => {
     const navigate = useNavigate()
@@ -10,6 +11,9 @@ const HomeMenu = () => {
 
     return (
         <div className="HomeMenu">
+            <Helmet>
+                <title>Ultimate Tic-Tac-Toe</title>
+            </Helmet>
             <div className={classNames("menu-logo", darkMode ? "darkTheme" : "")}>
                 Ultimate T<sup>3</sup>
             </div>

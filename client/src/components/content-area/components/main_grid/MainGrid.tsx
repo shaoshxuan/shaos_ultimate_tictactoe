@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet";
 import { toast } from 'react-toastify';
 import { ThemeContext } from "../../../../contexts/themeContext";
 import { gameWinningLogic, subGridWinningLogic } from "../../../../logic/winningLogics";
@@ -76,6 +77,9 @@ const MainGrid = () => {
 
     return (
         <div className="MainGrid">
+            <Helmet>
+                <title>Ultimate Tic-Tac-Toe | Local Game</title>
+            </Helmet>
             <div className="widthWarning">
                 Rotate your phone for game viewing compatibility
             </div>
