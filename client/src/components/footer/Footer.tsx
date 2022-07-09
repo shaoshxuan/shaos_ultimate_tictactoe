@@ -8,7 +8,7 @@ const Footer = () => {
     
     return (
         <div className={classNames("Footer", darkMode ? "darkTheme" : "")}>
-            Designed and Developed by Shao Shxuan | © 2022
+            Ultimate T<sup>3</sup> | Designed and Developed by Shao Shxuan | © 2022
         </div>
     )
 }
